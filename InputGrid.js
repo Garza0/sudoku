@@ -1,0 +1,5 @@
+class InputGrid {
+  constructor() {
+    getComputedStyle()
+  }
+}

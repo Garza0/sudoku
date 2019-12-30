@@ -4,3 +4,5 @@ const board = new Board(document.querySelector('.board'))
 
 Object.assign(window, { board })
 
+
+
