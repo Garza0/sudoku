@@ -23,15 +23,15 @@ export default class Board {
   }
   check() {
     let finishArr = this.cells.map(row => row.map(cell => cell.num))
-    finishArr = [[5, 4, 6, 8, 7, 9, 2, 1, 3],
-    [8, 7, 9, 2, 1, 3, 5, 4, 6],
-    [2, 1, 3, 5, 4, 6, 8, 7, 9],
-    [6, 5, 7, 9, 8, 1, 3, 2, 4],
-    [9, 8, 1, 3, 2, 4, 6, 5, 7],
-    [3, 2, 4, 6, 5, 7, 9, 8, 1],
-    [7, 6, 8, 1, 9, 2, 4, 3, 5],
-    [1, 9, 2, 4, 3, 5, 7, 6, 8],
-    [4, 3, 5, 7, 6, 8, 1, 9, 2]]
+    finishArr = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]]
     let newArr = []
 
     for (let i = 0; i < 9; i += 3) {
@@ -49,9 +49,11 @@ export default class Board {
 
     if (!finishArr.every(row => row.every(Boolean)) ||
       !finishArr.every(row => new Set(row).size == 9) ||
-      !finishArr.every((_, i) => new Set(finishArr.map(row => row[i])).size == 9 ||
-        !newArr.every(row => new Set(row).size == 9))
+      !finishArr.every((_, i) => new Set(finishArr.map(row => row[i])).size == 9) ||
+      !newArr.every(row => new Set(row).size == 9)
     ) return false
+
+
     return true
 
 
