@@ -30,3 +30,9 @@ tr:first-child td {
  
   border-top-width: 2px;
 }
+
+.result {
+  width: 20px;
+  height: 20px;
+
+}
