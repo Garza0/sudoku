@@ -12,7 +12,7 @@ export default class Board {
       }
     }
     this.render()
-    this.result = document.querySelector('.result')
+    this.result = document.querySelector('body')
     document.querySelector('.finish').onclick = () => this.check()
   }
 
@@ -57,8 +57,8 @@ export default class Board {
       this.result.style.backgroundColor = 'black'
       return false
     }
-
-    this.result.style.backgroundColor = 'red'
+    this.result.classList.toggle('toggle')
+    // this.result.style.backgroundColor = '#FE6969'
 
     return true
 
